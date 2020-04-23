@@ -2,16 +2,14 @@
 <!DOCTYPE xml>
 <configuration>
 
-  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-    <!-- encoders are assigned the type
-         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
-    <encoder>
-     <pattern>"log_level":"info" log_level:info "LOG_LEVEL":"warn" LOG_LEVEL:err LOG_LEVEL=info log_level=info message:%msg%n </pattern>
-    </encoder>
-  </appender>
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+	</appender>
 
-  <root level="info">
-    <appender-ref ref="STDOUT" />
-  </root>
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+	</root>
 
 </configuration>
+
