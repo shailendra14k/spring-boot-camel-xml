@@ -6,7 +6,7 @@
     <!-- encoders are assigned the type
          ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
     <encoder>
-     <pattern>"level":"info" [INFO] [level:info] message:%msg%n </pattern>
+     <pattern>"log_level":"info" log_level:info "LOG_LEVEL":"warn" LOG_LEVEL:err LOG_LEVEL=info log_level=info message:%msg%n </pattern>
     </encoder>
   </appender>
 
